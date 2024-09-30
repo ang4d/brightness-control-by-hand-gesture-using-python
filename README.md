@@ -1,13 +1,12 @@
 # brightness-control-by-hand-gesture-using-python
-HandTracking module that tracks all points on the hand and detects hand landmarks, calculate the distance between thumb tip and index fingertip and maps the distance between thumb tip and index fingertip with brightness range.
-# Importing Libraries 
+
 import cv2 
 import mediapipe as mp 
 from math import hypot 
 import screen_brightness_control as sbc 
 import numpy as np 
 
-# Initializing the Model 
+
 mpHands = mp.solutions.hands 
 hands = mpHands.Hands( 
 	static_image_mode=False, 
@@ -18,7 +17,7 @@ hands = mpHands.Hands(
 
 Draw = mp.solutions.drawing_utils 
 
-# Start capturing video from webcam 
+
 cap = cv2.VideoCapture(0) 
 
 while True: 
